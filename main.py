@@ -37,7 +37,7 @@ def calculadora_v2(num1: float, num2: float, operador: str) -> float:
     }
     
 
-    #commit 2
+    #Calculadora 2
     funcao = operacoes.get(operador)
     if funcao:
         return funcao()
