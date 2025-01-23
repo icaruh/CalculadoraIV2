@@ -9,15 +9,21 @@ def calculadora(num1: float, num2: float, operador: str) -> float:
     elif operador == '-':
         result = num1 - num2
     elif operador == '%':
-        result = num1 % num2
-    elif operador == '%':
-        result = num1 / num2
+        if num2 == 0:
+            return result
+        else:
+            result = num1 % num2
+    elif operador == '/':
+        if num2 == 0:
+            return result
+        else:
+            result = num1 / num2
     elif operador == '^':
         result = num1 ** num2
     elif operador == '*':
         result = num1 * num2
 
-    #commit1
+    #Calculadora 1
     return result
 
 def calculadora_v2(num1: float, num2: float, operador: str) -> float:
@@ -29,6 +35,7 @@ def calculadora_v2(num1: float, num2: float, operador: str) -> float:
         "%": lambda: num1 % num2,
         "^": lambda: num1 ** num2,
     }
+    
 
     #commit 2
     funcao = operacoes.get(operador)
