@@ -58,6 +58,7 @@ def calculadora_v3(num1: float, num2: float, operador: str) -> float:
         return operadores[operador](num1, num2)
 
     return float("nan")
+    #calculadora 3
 
 # esta versão quando tentamos o expoente de 0, ele retornava um erro, foi retificado
 def calculadora_v4(num1: float, num2: float, operador: str) -> float:
